@@ -1,0 +1,142 @@
+.modal-post {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  min-height: fit-content;
+  height: 100%;
+
+  &__body {
+    padding: 0 48px;
+    padding-bottom: 30px;
+    height: fit-content;
+    position: relative;
+    img {
+      text-align: right;
+      margin: 0 !important;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer;
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      color: #AAABAD;
+      padding-top: 7px;
+    }
+
+    h4 {
+      text-align: center;
+      padding-top: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 14px 0px;
+    }
+
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    width: 590px;
+    margin-top: 10%;
+    margin-bottom: 7%;
+    border-radius: 10px;
+
+    .btn-active {
+      background-color: #19B28D;
+      color: white;
+      border: none;
+    }
+
+    .notification {
+      background-color: #19b28d;
+      color: white;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      width: 97%;
+      margin-bottom: 25px;
+      margin-top: 15px;
+    }
+  }
+
+  &__text {
+    margin-top: 40px;
+
+    &_item {
+      h5 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1E212C;
+      }
+      input {
+        padding: 0 8px;
+        border-radius: 7px;
+        width: 97%;
+        height: 40px;
+        border: 1px solid rgba(11, 30, 69, 0.2);
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      textarea {
+        height: 56px;
+        width: 97%;
+        border-radius: 7px;
+        border: 1px solid rgba(11, 30, 69, 0.2);
+        padding: 8px;
+        font-weight: bold;
+        resize: none;
+      }
+    }
+
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    button {
+      width: 107px;
+      height: 40px;
+      border-radius: 7px;
+      color: #2B2D33;
+      border: 2px solid #AAABAD;
+      background-color: white;
+      margin-right: 24px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .btn-green {
+    background-color: #19B28D;
+    color: white;
+    border: none !important;
+    transition: .3s;
+  }
+
+  .btn-red {
+    background-color: #DD2A1B;
+    color: white;
+    border: none;
+  }
+  .btn-orange {
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    color: white;
+    border: none;
+  }
+}
