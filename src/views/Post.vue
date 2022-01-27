@@ -5,6 +5,7 @@
       :isVisiable="isModal"
       @close="close"
       />
+      <BackBtn/>
       <div class="home__header">
         <div class="home__header_text">
           <h4>Создай публикацию</h4>
@@ -52,6 +53,7 @@
 import { mapState } from 'vuex'
 import Loader from '../components/Loader.vue'
 import Modal from '../components/Modal.vue'
+import BackBtn from '../components/BackBtn.vue'
 
 export default {
   name: 'Home',
@@ -103,7 +105,8 @@ export default {
   },
   components: {
     Loader,
-    Modal
+    Modal,
+    BackBtn
   }
 }
 </script>
