@@ -88,7 +88,6 @@ export default {
           .then(data => {
             const res = state.posts.filter(item => item.id !== parseInt(id))
             state.posts = res
-            console.log(res)
           })
         state.loader = false
       } catch (e) {
@@ -97,7 +96,6 @@ export default {
       }
     },
     async updatePost ({ state }, data) {
-      console.log(data)
       try {
         await fetch('https://jsonplaceholder.typicode.com/posts/' + data.id, {
           method: 'PUT',
@@ -108,7 +106,6 @@ export default {
         })
           .then((response) => response.json())
           .then((json) => {
-            console.log(json)
             // state.posts.forEach((item, idx) => {
             //   if (item.id === parseInt(json.data.id)) {
             //     item.title = json.data.title
@@ -140,7 +137,6 @@ export default {
           .then(data => {
             const res = data.filter((item, idx) => idx < 10)
             state.comments = res
-            console.log(state.comments)
           })
         state.loader = false
       } catch (e) {
