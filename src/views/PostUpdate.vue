@@ -2,9 +2,6 @@
 <div class="home">
   <div class="contaner">
     <div class="home__update">
-      <BackBtn
-        :pathBack="'posts'"
-      />
       <h4>Редактирование поста</h4>
       <input type="text" v-model="post.title">
       <textarea name="" id="" cols="30" rows="10" v-model="post.body"></textarea>
@@ -22,7 +19,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import BackBtn from '../components/BackBtn'
 export default {
   name: 'PostUpdate',
   data () {
@@ -47,9 +43,6 @@ export default {
     const res = this.posts.filter(item => item.id === parseInt(this.$route.params.id))
     this.post.title = res[0].title
     this.post.body = res[0].body
-  },
-  components: {
-    BackBtn
   }
 }
 </script>
