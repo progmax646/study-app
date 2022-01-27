@@ -36,7 +36,9 @@
         </div>
       </div>
       <div class="home__loader" v-if="loader">
-        <Loader />
+        <Loader
+        :marginT="130"
+        />
       </div>
       <div class="home__not-found" v-if="getPosts.length === 0 && !loader">
         <img src="@/assets/img/not-found.png" alt="" width="150">
@@ -62,7 +64,6 @@ export default {
   computed: {
     ...mapState('post', ['posts', 'loader']),
     getPosts () {
-      console.log(this.posts)
       // поиск
       if (this.searchInput.length > 2) {
         const res = this.posts.filter(item => item.title.toLowerCase().includes(this.searchInput.toLowerCase()))
